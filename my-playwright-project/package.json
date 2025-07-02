@@ -1,0 +1,20 @@
+{
+  "name": "my-playwright-project",
+  "version": "1.0.0",
+  "description": "A sample project using Playwright for end-to-end testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "playwright": "^1.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "playwright",
+    "testing",
+    "e2e"
+  ],
+  "author": "",
+  "license": "MIT"
+}
