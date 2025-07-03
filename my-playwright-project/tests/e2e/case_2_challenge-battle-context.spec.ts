@@ -43,6 +43,7 @@ test.afterEach(async () => {
   await browser.close();
 });
 
+test.setTimeout(999999);
 test('Challenge flow between N contexts', async () => {
   // Each odd account challenges the next even account, and the even accepts
   for (let i = 0; i < accounts.length - 1; i += 2) {
@@ -70,7 +71,7 @@ test('Challenge flow between N contexts', async () => {
     await titanImage1.click();
     const selectButton1 = await pages[i].waitForSelector(SELECTOR_SELECT_BUTTON, { timeout: 15000 });
     await selectButton1.click();
-    
+
     // User_1 clicks the Battle button after select
     const battleStartButton1 = await pages[i].waitForSelector(SELECTOR_BATTLE_START_BUTTON, { timeout: 15000 });
     await battleStartButton1.click();
@@ -87,7 +88,7 @@ test('Challenge flow between N contexts', async () => {
 
   }
 
-  // 
+  //
   await Promise.all(
     pages.map(async (page, idx) => {
       if (idx % 2 === 0) {

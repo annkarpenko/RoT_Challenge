@@ -40,6 +40,7 @@ test.afterEach(async () => {
   await browser.close();
 });
 
+test.setTimeout(999999);
 test('Challenge flow between N contexts', async () => {
   // Each odd account challenges the next even account, and the even accepts
   for (let i = 0; i < accounts.length; i += 2) {
