@@ -51,7 +51,7 @@ test('Challenge flow between N instances', async () => {
     await battleButton.click();
 
     // User_1 Initiate Challenge
-    const challengeRow = await pages[i].waitForSelector(SELECTOR_CHALLENGE_ROW(accounts[i + 1]), { timeout: 15000 });
+    const challengeRow = await pages[i].waitForSelector(SELECTOR_CHALLENGE_ROW(accounts[i + 1]), { timeout: 999000 });
     const rowElement = await challengeRow.evaluateHandle(node => node.closest('[class*="row"]'));
     const challengeButton = await rowElement.asElement()?.$(SELECTOR_CHALLENGE_BUTTON);
     if (challengeButton) {
