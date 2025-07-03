@@ -9,7 +9,9 @@
   "dependencies": {
     "playwright": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^24.0.10"
+  },
   "keywords": [
     "playwright",
     "testing",
